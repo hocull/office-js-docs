@@ -21,8 +21,9 @@ Office.context.document.getTaskFieldAsync(taskId, fieldId[, options][, callback]
 |**Name**|**Type**|**Description**|**Support notes**|
 |:-----|:-----|:-----|:-----|
 | _taskId_|**string**|The GUID of the task. Required.||
-| _fieldId_|[ProjectTaskFields](../../reference/shared/projecttaskfields-enumeration.md)|The ID of the target field. Required.||
+| _fieldId_|[ProjectTaskFields](../../reference/shared/projecttaskfields-enumeration.md)|The ID of the target field. Required. Set to -1 to indicate an Enterprise Custom Field||
 | _options_|**object**|Specifies any of the following [optional parameters](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods).||
+| _customFieldID_ | **string**|The GUID of the Enterprise Custom Field. Optional.||
 | _asyncContext_|**array**,  **boolean**,  **null**,  **number**,  **object**, **string**, or  **undefined**|A user-defined item of any type that is returned in the  **AsyncResult** object without being altered.||
 | _callback_|**object**|A function that is invoked when the callback returns, whose only parameter is of type  **AsyncResult**.||
 
@@ -171,7 +172,9 @@ For more information about Office host application and server requirements, see 
 
 |**Version**|**Changes**|
 |:-----|:-----|
+|1.1|Added support for Enterprise Custom Fields|
 |1.0|Introduced|
+
 
 ## See also
 
